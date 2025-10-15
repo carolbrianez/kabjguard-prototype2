@@ -2,11 +2,12 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>KABJ Guard</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
   <!-- NAVBAR -->
   <header class="navbar">
     <div class="container__navbar">
@@ -34,7 +35,11 @@
   <section id="sobre" class="content-section">
     <div class="container__sobre">
       <h3>Quem Somos</h3>
-      <p>A <strong>KABJ Guard</strong> é especializada em soluções de rastreamento e gestão de frotas. Oferecemos tecnologia de ponta para que empresas de transporte tenham total controle sobre seus veículos, motoristas e cargas, com foco em segurança, economia e produtividade.</p>
+      <p>
+        A <strong>KABJ Guard</strong> é especializada em soluções de rastreamento e gestão de frotas.
+        Oferecemos tecnologia de ponta para que empresas de transporte tenham total controle sobre
+        seus veículos, motoristas e cargas, com foco em segurança, economia e produtividade.
+      </p>
     </div>
   </section>
 
@@ -42,46 +47,44 @@
   <section id="servicos" class="content-section alt">
     <div class="container__servicos">
       <h3>Nossos Serviços</h3>
-      <ul class="benefits">
-        <li>📍 Rastreamento em tempo real por GPS</li>
-        <li>📈 Relatórios detalhados de trajeto, velocidade e paradas</li>
-        <li>🛠️ Alertas automáticos de manutenção preventiva</li>
-        <li>🔒 Proteção contra roubo e desvios de rota</li>
-        <li>📊 Dashboard inteligente com indicadores de desempenho</li>
-      </ul>
-    </div>
-  </section>
 
-  <!-- EQUIPE -->
-  <section id="equipe" class="content-section">
-    <div class="container__equipe">
-      <h3>Nossa Equipe</h3>
-      <div class="team-grid">
-        <div class="team-member">
-          <img src="https://via.placeholder.com/150" alt="Carol" />
-          <h4>Ana Carolina Caroline</h4>
-          <p>Desenvolvedora Front-end</p>
+      <div class="carousel">
+        <button class="carousel-btn prev">&#10094;</button>
+
+        <div class="carousel-track">
+          <div class="carousel-item">
+            <img src="https://img.freepik.com/free-vector/gps-navigation-map-smartphone_23-2147823405.jpg" alt="Rastreamento em tempo real">
+            <h4>📍 Rastreamento em tempo real por GPS</h4>
+            <p>Monitore cada caminhão em tempo real com tecnologia GPS precisa, em todo o território nacional.</p>
+          </div>
+
+          <div class="carousel-item">
+            <img src="https://img.freepik.com/free-vector/analytics-concept-illustration_114360-1435.jpg" alt="Relatórios detalhados">
+            <h4>📈 Relatórios detalhados de trajeto, velocidade e paradas</h4>
+            <p>Receba relatórios completos com trajetos, velocidade média, paradas e comportamento de direção.</p>
+          </div>
+
+          <div class="carousel-item">
+            <img src="https://img.freepik.com/free-vector/security-concept-illustration_114360-487.jpg" alt="Proteção contra roubo">
+            <h4>🔒 Proteção contra roubo e desvios de rota</h4>
+            <p>Oferecemos bloqueio remoto e alertas em tempo real em caso de rotas suspeitas ou tentativas de roubo.</p>
+          </div>
+
+          <div class="carousel-item">
+            <img src="https://img.freepik.com/free-vector/security-concept-illustration_114360-487.jpg" alt="Proteção contra roubo">
+            <h4>🛠️ Alertas automáticos de manutenção preventiva</h4>
+            <p>Evite imprevistos com notificações inteligentes que avisam quando cada veículo precisa de revisão, troca de óleo ou checagem de peças.</p>
+          </div>
+
+          <div class="carousel-item">
+            <img src="https://img.freepik.com/free-vector/security-concept-illustration_114360-487.jpg" alt="Proteção contra roubo">
+            <h4>📊 Dashboard inteligente com indicadores de desempenho</h4>
+            <p>Visualize dados em tempo real sobre consumo, rotas e desempenho dos motoristas, facilitando decisões estratégicas e o aumento da eficiência da frota.</p>
+          </div>
+
         </div>
-        <div class="team-member">
-          <img src="https://via.placeholder.com/150" alt="Karol" />
-          <h4>Ana Karolina</h4>
-          <p>Departamento Jurídico</p>
-        </div>
-        <div class="team-member">
-          <img src="https://via.placeholder.com/150" alt="Barbara" />
-          <h4>Bárbara Silva</h4>
-          <p>Marketing</p>
-        </div>
-        <div class="team-member">
-          <img src="https://via.placeholder.com/150" alt="Ga" />
-          <h4>Gabriel Makiyama</h4>
-          <p>Engenheiro de Software</p>
-        </div>
-        <div class="team-member">
-          <img src="https://via.placeholder.com/150" alt="Joao" />
-          <h4>João Victor</h4>
-          <p>Engenheiro de Software</p>
-        </div>
+
+        <button class="carousel-btn next">&#10095;</button>
       </div>
     </div>
   </section>
@@ -91,8 +94,8 @@
     <div class="container__contato">
       <h3>Fale com a Gente</h3>
       <form id="contact-form">
-        <input type="text" placeholder="Seu nome" required />
-        <input type="email" placeholder="Seu e-mail" required />
+        <input type="text" placeholder="Seu nome" required>
+        <input type="email" placeholder="Seu e-mail" required>
         <textarea placeholder="Sua mensagem" required></textarea>
         <button type="submit" class="btn">Enviar</button>
       </form>
