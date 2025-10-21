@@ -30,18 +30,18 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #0f6b0f; /* ou sua cor */
+  background-color: #0f6b0f; 
   padding: 10px 40px;
 }
 
 .logo-container {
   display: flex;
   align-items: center;
-  gap: 6px; /* diminui a distância entre o logo e o texto */
+  gap: 6px; 
 }
 
 .logo {
-  height: 40px; /* ajuste conforme necessário */
+  height: 40px; 
 }
 
 .logo-text {
@@ -81,8 +81,6 @@ body {
   }
 }
 
-
-
 /* HERO */
 .hero {
   background: url("https://cdna.artstation.com/p/assets/images/images/063/690/740/original/onlytheocean-snwrnr-cover-2-animated.gif?1686133067") center bottom/cover no-repeat;
@@ -97,7 +95,7 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.4); /* escurece um pouco o fundo pra texto ficar legível */
+  background: rgba(0, 0, 0, 0.4); 
 }
 
 .hero .container__hero {
@@ -145,7 +143,7 @@ body {
   align-items: center;
 }
 
-/* QUEM SOMOS E SERVIÇOS CENTRALIZADOS */
+/* QUEM SOMOS E SERVIÇOS */
 .container__sobre,
 .container__servicos {
   text-align: center;
@@ -214,40 +212,113 @@ footer {
   margin-top: 40px;
 }
 
-/* EQUIPE */
-.team-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 30px;
-  margin-top: 30px;
-}
-
-.team-member {
+/* --- SEÇÃO EQUIPE --- */
+.container__equipe {
   text-align: center;
-  background-color: #f1fdf1;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+  max-width: 1200px; 
+  margin: 0 auto;
 }
 
-.team-member img {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 15px;
+.team-photo-container {
+  position: relative;
+  display: inline-block; 
+  margin-top: 20px;
+  overflow: hidden; 
+  border-radius: 8px; 
 }
 
-.team-member h4 {
-  margin-bottom: 5px;
-  font-size: 1.2rem;
-  color: #0d730d;
+.team-photo {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
-.team-member p {
-  font-size: 0.95rem;
-  color: #444;
+.team-member-hotspot {
+  position: absolute;
+  top: 0;
+  height: 100%; 
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.3s ease;  
+  clip-path: inset(0 0 0 0);
 }
+
+.team-member-hotspot:hover {
+  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.1);
+}
+
+.member-info {
+  position: absolute;
+  top: 55%; 
+  left: 50%;
+  transform: translateX(-50%);  
+  background-color: rgba(255, 255, 255, 0.95);
+  color: #333;
+  padding: 8px 12px;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  white-space: nowrap; 
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 20;
+}
+
+.member-info h4 {
+  margin: 0 0 3px 0;
+  font-size: 0.9em;
+}
+
+.member-info p {
+  margin: 0;
+  font-size: 0.75em;
+  font-weight: 400;
+  color: #666;
+}
+
+.team-member-hotspot:hover + .team-photo,
+.team-member-hotspot:hover ~ .team-photo {
+    transform: scale(1.05);
+    transition: transform 0.4s ease-in-out;
+}
+
+.team-member-hotspot:hover .member-info {
+  opacity: 1; 
+  transform: translateX(-50%); 
+}
+
+/* --- Posicionamento e Dimensão dos Hotspots --- */
+
+/* Pessoa 1: Bárbara Silva */
+.team-member-hotspot.person-1 {
+  left: 0%; 
+  width: 20%; 
+}
+
+/* Pessoa 2: Ana Karolina */
+.team-member-hotspot.person-2 {
+  left: 20%;
+  width: 20%;
+}
+
+/* Pessoa 3: Ana Carolina (Centro) */
+.team-member-hotspot.person-3 {
+  left: 40%;
+  width: 20%;
+}
+
+/* Pessoa 4: João Victor */
+.team-member-hotspot.person-4 {
+  left: 60%;
+  width: 20%;
+}
+
+/* Pessoa 5: Gabriel Makiyama */
+.team-member-hotspot.person-5 {
+  left: 80%;
+  width: 20%;
+}
+
 /* --- CARROSSEL DE SERVIÇOS --- */
 .carousel {
   position: relative;
