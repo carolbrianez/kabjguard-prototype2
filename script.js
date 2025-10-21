@@ -34,7 +34,7 @@ window.addEventListener("resize", updateCarousel);
 // Inicializa o carrossel
 updateCarousel();
 
-// --- NOVO EFEITO DE ZOOM INDIVIDUAL NA EQUIPE COM JS (VERSÃO CORRIGIDA) ---
+// --- ZOOM INDIVIDUAL NA EQUIPE COM JS (CORRIGIDA) ---
 
 function setupTeamZoom() {
     const teamContainer = document.querySelector('.team-photo-container');
@@ -42,31 +42,25 @@ function setupTeamZoom() {
     const referenceImage = document.querySelector('.team-photo-reference');
     const imageUrl = referenceImage.src; 
     
-    // Fator de zoom (1.25 a 1.35 costuma ser um bom ponto de partida)
     const ZOOM_FACTOR = 1.30; 
     
     // Largura de uma única pessoa em porcentagem
     const HOTSPOT_WIDTH_PERCENT = 20;
 
-    // Garante que o container já tem seu tamanho definido
     const containerWidth = referenceImage.offsetWidth;
     const containerHeight = referenceImage.offsetHeight;
 
     if (containerWidth === 0 || containerHeight === 0) {
-        // Tenta novamente se as dimensões ainda não estiverem prontas
         setTimeout(setupTeamZoom, 100);
         return;
     }
     
-    // Calcula o tamanho do background da imagem completa
     const initialBackgroundSizeX = containerWidth;
     const initialBackgroundSizeY = containerHeight;
 
-    // Tamanho do background com zoom
     const zoomedBackgroundSizeX = initialBackgroundSizeX * ZOOM_FACTOR;
     const zoomedBackgroundSizeY = initialBackgroundSizeY * ZOOM_FACTOR;
     
-    // A diferença no tamanho após o zoom
     const zoomDeltaX = zoomedBackgroundSizeX - initialBackgroundSizeX;
     const zoomDeltaY = zoomedBackgroundSizeY - initialBackgroundSizeY;
 
@@ -76,8 +70,6 @@ function setupTeamZoom() {
         const hotspotLeftPercent = index * HOTSPOT_WIDTH_PERCENT;
         
         // 2. CÁLCULO CRÍTICO DA POSIÇÃO INICIAL X (em pixels)
-        // A imagem de fundo precisa estar posicionada de forma que a sua fatia 
-        // correspondente (20%) caiba perfeitamente no hotspot.
         const initialBackgroundPositionX = - (hotspotLeftPercent / 100 * containerWidth);
         const initialBackgroundPositionY = 0; 
         
@@ -91,18 +83,16 @@ function setupTeamZoom() {
         hotspot.addEventListener('mouseenter', () => {
             
             // Posição final X: Posição inicial menos metade do delta X.
-            // O uso de Math.round() é crucial aqui para evitar sub-pixels.
             const finalBackgroundPositionX = initialBackgroundPositionX - (zoomDeltaX / 2);
             
             // Posição final Y: Sobe o foco para o rosto.
-            // Multiplicador 0.75 tenta focar na área superior da pessoa.
             const finalBackgroundPositionY = - (zoomDeltaY * 0.75); 
 
             hotspot.style.backgroundSize = `${Math.round(zoomedBackgroundSizeX)}px ${Math.round(zoomedBackgroundSizeY)}px`;
             hotspot.style.backgroundPosition = `${Math.round(finalBackgroundPositionX)}px ${Math.round(finalBackgroundPositionY)}px`;
         });
 
-        // Remove o Efeito de Hover (Saída do Mouse)
+        // Remove o Efeito de Hover
         hotspot.addEventListener('mouseleave', () => {
             // Retorna ao tamanho e posição original
             hotspot.style.backgroundSize = `${Math.round(initialBackgroundSizeX)}px ${Math.round(initialBackgroundSizeY)}px`;
@@ -110,7 +100,7 @@ function setupTeamZoom() {
         });
     });
     
-    // Lógica de Re-inicialização no Resize (Mantenha)
+    // Lógica de Re-inicialização no Resize
     let resizeTimer;
     window.addEventListener('resize', () => {
         clearTimeout(resizeTimer);
@@ -122,7 +112,7 @@ function setupTeamZoom() {
             setupTeamZoom(); 
         }, 250); 
     });
-}
+}   
 
 // Carrossel de Feedbacks
 const feedbackTrack = document.querySelector('.feedback-carousel .carousel-track');
