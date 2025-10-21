@@ -2,24 +2,26 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="assets/logo-kabj.png">
   <title>KABJ Guard</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
   <!-- NAVBAR -->
-  <header class="navbar">
-    <div class="container__navbar">
-      <h1 class="logo">KABJ Guard</h1>
-      <nav>
-        <ul class="nav-links">
-          <li><a href="#sobre">Sobre</a></li>
-          <li><a href="#servicos">Serviços</a></li>
-          <li><a href="#contato">Contato</a></li>
-        </ul>
-      </nav>
+  <nav class="navbar">
+    <div class="logo-container">
+      <img src="assets/logo-kabj.png" alt="Logo da KABJ Guard" class="logo" />
+      <span class="logo-text">KABJ Guard</span>
     </div>
-  </header>
+
+    <ul class="nav-links">
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#servicos">Serviços</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+  </nav>
 
   <!-- HERO -->
   <section class="hero">
@@ -34,7 +36,11 @@
   <section id="sobre" class="content-section">
     <div class="container__sobre">
       <h3>Quem Somos</h3>
-      <p>A <strong>KABJ Guard</strong> é especializada em soluções de rastreamento e gestão de frotas. Oferecemos tecnologia de ponta para que empresas de transporte tenham total controle sobre seus veículos, motoristas e cargas, com foco em segurança, economia e produtividade.</p>
+      <p>
+        A <strong>KABJ Guard</strong> é especializada em soluções de rastreamento e gestão de frotas.
+        Oferecemos tecnologia de ponta para que empresas de transporte tenham total controle sobre
+        seus veículos, motoristas e cargas, com foco em segurança, economia e produtividade.
+      </p>
     </div>
   </section>
 
@@ -42,13 +48,45 @@
   <section id="servicos" class="content-section alt">
     <div class="container__servicos">
       <h3>Nossos Serviços</h3>
-      <ul class="benefits">
-        <li>📍 Rastreamento em tempo real por GPS</li>
-        <li>📈 Relatórios detalhados de trajeto, velocidade e paradas</li>
-        <li>🛠️ Alertas automáticos de manutenção preventiva</li>
-        <li>🔒 Proteção contra roubo e desvios de rota</li>
-        <li>📊 Dashboard inteligente com indicadores de desempenho</li>
-      </ul>
+
+      <div class="carousel">
+        <button class="carousel-btn prev">&#10094;</button>
+
+        <div class="carousel-track">
+          <div class="carousel-item">
+            <img src="/assets/rastreamento.png" alt="Rastreamento em tempo real">
+            <h4>📍 Rastreamento em tempo real por GPS</h4>
+            <p>Monitore cada caminhão em tempo real com tecnologia GPS precisa, em todo o território nacional.</p>
+          </div>
+
+          <div class="carousel-item">
+            <img src="/assets/relatorios-detalhados.png" alt="Relatórios detalhados">
+            <h4>📈 Relatórios detalhados de trajeto, velocidade e paradas</h4>
+            <p>Receba relatórios completos com trajetos, velocidade média, paradas e comportamento de direção.</p>
+          </div>
+
+          <div class="carousel-item">
+            <img src="/assets/protecao-roubo.png" alt="Proteção contra roubo">
+            <h4>🔒 Proteção contra roubo e desvios de rota</h4>
+            <p>Oferecemos bloqueio remoto e alertas em tempo real em caso de rotas suspeitas ou tentativas de roubo.</p>
+          </div>
+
+          <div class="carousel-item">
+            <img src="/assets/manutencao-preventiva.png" alt="Alertas automáticos">
+            <h4>🛠️ Alertas automáticos de manutenção preventiva</h4>
+            <p>Evite imprevistos com notificações inteligentes que avisam quando cada veículo precisa de revisão, troca de óleo ou checagem de peças.</p>
+          </div>
+
+          <div class="carousel-item">
+            <img src="/assets/dashboard.png" alt="Dashboard Inteligente">
+            <h4>📊 Dashboard inteligente com indicadores de desempenho</h4>
+            <p>Visualize dados em tempo real sobre consumo, rotas e desempenho dos motoristas, facilitando decisões estratégicas e o aumento da eficiência da frota.</p>
+          </div>
+
+        </div>
+
+        <button class="carousel-btn next">&#10095;</button>
+      </div>
     </div>
   </section>
 
@@ -59,7 +97,7 @@
       <div class="team-grid">
         <div class="team-member">
           <img src="https://via.placeholder.com/150" alt="Carol" />
-          <h4>Ana Carolina Caroline</h4>
+          <h4>Ana Carolina</h4>
           <p>Desenvolvedora Front-end</p>
         </div>
         <div class="team-member">
@@ -86,13 +124,77 @@
     </div>
   </section>
 
+  
+  <!-- FEEDBACKS -->
+  <section id="feedbacks" class="content-section alt">
+    <div class="container__feedbacks">
+      <h3>Feedbacks de Nossos Clientes</h3>
+
+      <div class="carousel feedback-carousel">
+        <button class="carousel-btn prev">&#10094;</button>
+
+        <div class="carousel-track">
+
+          <div class="carousel-item feedback-pair">
+            <div class="feedback-card">
+              <h4>🚛 Marcelo Oliveira — Barretos/SP</h4>
+              <p>"O sistema da KABJ Guard transformou nossa operação logística. A precisão do rastreamento é impressionante!"</p>
+            </div>
+            <div class="feedback-card">
+              <h4>📍 Fernanda Souza — Bebedouro/SP</h4>
+              <p>"O painel é intuitivo e fácil de usar. A equipe de suporte sempre responde rápido e com muita atenção!"</p>
+            </div>
+          </div>
+
+          <div class="carousel-item feedback-pair">
+            <div class="feedback-card">
+              <h4>🚚 Rogério Lima — Sertãozinho/SP</h4>
+              <p>"Reduzimos custos e melhoramos a segurança da frota. Os alertas automáticos de manutenção são um diferencial."</p>
+            </div>
+            <div class="feedback-card">
+              <h4>🚛 Juliana Castro — Ribeirão Preto/SP</h4>
+              <p>"Excelente solução para quem quer ter controle total da frota. O dashboard facilita muito as decisões diárias."</p>
+            </div>
+          </div>
+
+          <div class="carousel-item feedback-pair">
+            <div class="feedback-card">
+              <h4>📍 André Martins — Franca/SP</h4>
+              <p>"Depois que começamos a usar a KABJ Guard, nunca mais tivemos problemas com desvios de rota ou atrasos."</p>
+            </div>
+            <div class="feedback-card">
+              <h4>🚚 Carla Pereira — Guaíra/SP</h4>
+              <p>"A interface é super moderna e os relatórios ajudam a entender o desempenho dos motoristas de forma clara."</p>
+            </div>
+          </div>
+
+          <div class="carousel-item feedback-pair">
+            <div class="feedback-card">
+              <h4>📍 Lucas Mendes — Monte Azul Paulista/SP</h4>
+              <p>"A KABJ Guard trouxe mais segurança e transparência para toda a nossa equipe de transporte. Vale muito a pena!"</p>
+            </div>
+            <div class="feedback-card">
+              <h4>🚛 Camila Nunes — Jaboticabal/SP</h4>
+              <p>"Os relatórios automáticos economizam muito tempo! Finalmente temos uma visão completa da operação da frota."</p>
+            </div>
+          </div>
+
+        </div>
+
+        <button class="carousel-btn next">&#10095;</button>
+      </div>
+    </div>
+  </section>
+
+
+
   <!-- CONTATO -->
   <section id="contato" class="content-section">
     <div class="container__contato">
       <h3>Fale com a Gente</h3>
       <form id="contact-form">
-        <input type="text" placeholder="Seu nome" required />
-        <input type="email" placeholder="Seu e-mail" required />
+        <input type="text" placeholder="Seu nome" required>
+        <input type="email" placeholder="Seu e-mail" required>
         <textarea placeholder="Sua mensagem" required></textarea>
         <button type="submit" class="btn">Enviar</button>
       </form>
