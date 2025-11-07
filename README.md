@@ -71,7 +71,6 @@ A equipe por trás deste protótipo é composta por:
 | :--- | :--- |
 | **Ana Carolina** | Desenvolvedora Front-end |
 | **Ana Karolina** | Departamento Jurídico |
-| **Bárbara Silva** | Marketing |
 | **Gabriel Makiyama** | Engenheiro de Software |
 | **João Victor** | Engenheiro de Software |
 
