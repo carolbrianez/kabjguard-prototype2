@@ -5,22 +5,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" type="image/png" href="assets/logo-kabj.png">
   <title>KABJ Guard</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="script.js"></script>
+  <script src="funcoes.js"></script>
 </head>
 <body>
 
   <!-- NAVBAR -->
-  <nav class="navbar">
-    <div class="logo-container">
-      <img src="assets/logo-kabj.png" alt="Logo da KABJ Guard" class="logo" />
-      <span class="logo-text">KABJ Guard</span>
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="assets/logo-kabj.png" alt="KABJ Guard" height="45" class="me-2">
+        <span>KABJ Guard</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#inicio">Início</a></li>
+          <li class="nav-item"><a class="nav-link" href="#servicos">Serviços</a></li>
+          <li class="nav-item"><a class="nav-link" href="#planos">Planos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#equipe">Equipe</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+        </ul>
+      </div>
     </div>
-
-    <ul class="nav-links">
-      <li><a href="#sobre">Sobre</a></li>
-      <li><a href="#servicos">Serviços</a></li>
-      <li><a href="#contato">Contato</a></li>
-    </ul>
   </nav>
 
   <!-- HERO -->
@@ -44,158 +58,309 @@
     </div>
   </section>
 
-  <!-- SERVIÇOS -->
-  <section id="servicos" class="content-section alt">
-    <div class="container__servicos">
-      <h3>Nossos Serviços</h3>
+<!-- SERVIÇOS -->
+<section id="servicos" class="content-section alt">
+  <div class="container__servicos text-center">
+    <h3 class="mb-4">Nossos Serviços</h3>
 
-      <div class="carousel">
-        <button class="carousel-btn prev">&#10094;</button>
+    <div id="carouselServicos" class="carousel slide carousel-dark" data-bs-ride="carousel" data-bs-interval="4000" data-bs-wrap="true">
+      
+      <div class="carousel-inner">
 
-        <div class="carousel-track">
-          <div class="carousel-item">
-            <img src="assets/rastreamento.png" alt="Rastreamento em tempo real">
+        <div class="carousel-item active">
+          <img src="assets/rastreamento.png" class="d-block w-100 rounded" alt="Rastreamento em tempo real">
+          <div class="carousel-caption d-none d-md-block bg-success bg-opacity-75 rounded p-3">
             <h4>📍 Rastreamento em tempo real por GPS</h4>
             <p>Monitore cada caminhão em tempo real com tecnologia GPS precisa, em todo o território nacional.</p>
           </div>
+        </div>
 
-          <div class="carousel-item">
-            <img src="assets/relatorios-detalhados.png" alt="Relatórios detalhados">
+        <div class="carousel-item">
+          <img src="assets/relatorios-detalhados.png" class="d-block w-100 rounded" alt="Relatórios detalhados">
+          <div class="carousel-caption d-none d-md-block bg-success bg-opacity-75 rounded p-3">
             <h4>📈 Relatórios detalhados de trajeto, velocidade e paradas</h4>
             <p>Receba relatórios completos com trajetos, velocidade média, paradas e comportamento de direção.</p>
           </div>
+        </div>
 
-          <div class="carousel-item">
-            <img src="assets/protecao-roubo.png" alt="Proteção contra roubo">
+        <div class="carousel-item">
+          <img src="assets/protecao-roubo.png" class="d-block w-100 rounded" alt="Proteção contra roubo">
+          <div class="carousel-caption d-none d-md-block bg-success bg-opacity-75 rounded p-3">
             <h4>🔒 Proteção contra roubo e desvios de rota</h4>
             <p>Oferecemos bloqueio remoto e alertas em tempo real em caso de rotas suspeitas ou tentativas de roubo.</p>
           </div>
+        </div>
 
-          <div class="carousel-item">
-            <img src="assets/manutencao-preventiva.png" alt="Alertas automáticos">
+        <div class="carousel-item">
+          <img src="assets/manutencao-preventiva.png" class="d-block w-100 rounded" alt="Alertas automáticos">
+          <div class="carousel-caption d-none d-md-block bg-success bg-opacity-75 rounded p-3">
             <h4>🛠️ Alertas automáticos de manutenção preventiva</h4>
             <p>Evite imprevistos com notificações inteligentes que avisam quando cada veículo precisa de revisão, troca de óleo ou checagem de peças.</p>
           </div>
+        </div>
 
-          <div class="carousel-item">
-            <img src="assets/dashboard.png" alt="Dashboard Inteligente">
+        <div class="carousel-item">
+          <img src="assets/dashboard.png" class="d-block w-100 rounded" alt="Dashboard Inteligente">
+          <div class="carousel-caption d-none d-md-block bg-success bg-opacity-75 rounded p-3">
             <h4>📊 Dashboard inteligente com indicadores de desempenho</h4>
             <p>Visualize dados em tempo real sobre consumo, rotas e desempenho dos motoristas, facilitando decisões estratégicas e o aumento da eficiência da frota.</p>
           </div>
-
         </div>
 
-        <button class="carousel-btn next">&#10095;</button>
       </div>
+
+      <!-- Botões de navegação -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselServicos" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Anterior</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselServicos" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Próximo</span>
+      </button>
+
+      <!-- Indicadores -->
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselServicos" data-bs-slide-to="0" class="active" aria-current="true"></button>
+        <button type="button" data-bs-target="#carouselServicos" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#carouselServicos" data-bs-slide-to="2"></button>
+        <button type="button" data-bs-target="#carouselServicos" data-bs-slide-to="3"></button>
+        <button type="button" data-bs-target="#carouselServicos" data-bs-slide-to="4"></button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== REALIDADE EM NÚMEROS ===== -->
+<section id="realidade-numeros" class="py-5" style="background-color: #f5fff5;">
+  <div class="container text-center">
+    <h3 style="color: #1a4d2e; margin-bottom: 1rem;">A realidade em números</h3>
+    <p class="mb-4" style="color: #555;">Veja conosco alguns dados que mostram o impacto real de rastrear sua frota.</p>
+
+    <div class="row g-4">
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="stat-card p-4 bg-white rounded-16 shadow-sm">
+          <h2 class="stat-number" data-target="15">0</h2>
+          <p class="stat-description">média de redução de custos com combustível</p>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="stat-card p-4 bg-white rounded-16 shadow-sm">
+          <h2 class="stat-number" data-target="18">0</h2>
+          <p class="stat-description">média de redução no tempo de condução</p>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="stat-card p-4 bg-white rounded-16 shadow-sm">
+          <h2 class="stat-number" data-target="11">0</h2>
+          <p class="stat-description">média de redução nos quilômetros percorridos</p>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="stat-card p-4 bg-white rounded-16 shadow-sm">
+          <h2 class="stat-number" data-target="40">0</h2>
+          <p class="stat-description">aumento da produtividade dos motoristas</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+   <!-- PLANOS E PREÇOS -->
+  <section id="planos" class="content-section">
+    <div class="container__planos text-center">
+      <h3>Planos e Preços</h3>
+      <p class="descricao-planos">Mensalidades acessíveis, adaptadas ao porte de cada cliente.</p>
+
+      <div class="pricing-container">
+
+        <div class="pricing-card">
+          <h4>Plano Básico</h4>
+          <h2>R$500<span>/mês</span></h2>
+          <ul>
+            <li>📍 Rastreamento por GPS</li>
+            <li>🕒 Acompanhamento 24h</li>
+          </ul>
+          <a href="#contato" class="btn btn-pricing">Escolher Plano</a>
+        </div>
+
+        <div class="pricing-card destaque">
+          <h4>Plano Intermediário</h4>
+          <h2>R$750<span>/mês</span></h2>
+          <ul>
+            <li>📍 Rastreamento por GPS</li>
+            <li>🕒 Acompanhamento 24h</li>
+            <li>🛡️ Gerenciamento de risco</li>
+          </ul>
+          <a href="#contato" class="btn btn-pricing">Escolher Plano</a>
+        </div>
+
+        <div class="pricing-card">
+          <h4>Plano Avançado</h4>
+          <h2>R$1000<span>/mês</span></h2>
+          <ul>
+            <li>📍 Rastreamento por GPS</li>
+            <li>🕒 Acompanhamento 24h</li>
+            <li>🛡️ Gerenciamento de risco</li>
+            <li>📊 Telemetria completa</li>
+          </ul>
+          <a href="#contato" class="btn btn-pricing">Escolher Plano</a>
+        </div>
+
+      </div>
+
+      <p class="nota-preco">Taxa de instalação: mão de obra + aparelho = <strong>R$300,00</strong></p>
     </div>
   </section>
 
   <!-- EQUIPE -->
-  <section id="equipe" class="content-section">
-    <div class="container__equipe">
-      <h3>Nossa Equipe</h3>
-      <div class="team-photo-container">
-        <img src="assets/equipe-kabj.jpg" alt="Equipe KABJ Guard" class="team-photo" />
+  <section id="equipe" class="py-5">
+  <div class="container">
+    <div class="row align-items-center">
 
-        <div class="team-member-hotspot person-1">
-          <div class="member-info">
-            <h4>Bárbara Silva</h4>
-            <p>Marketing</p>
+      <div class="col-lg-6 order-2 order-lg-1">
+        <div class="row g-3">
+          <div class="col-sm-6">
+            <div class="card text-center border-0 bg-light shadow-sm rounded-4">
+              <div class="card-body px-4 py-4">
+                <div class="mb-4 mx-2 mx-md-5">
+                  <img class="team-img img-fluid rounded-circle" src="assets/joao.jpg" alt="João Victor">
+                </div>
+                <h5 class="fw-bold text-success mb-1">João Victor</h5>
+                <div class="text-muted small">Engenheiro de Software</div>
+              </div>
+            </div>
           </div>
-        </div>
 
-        <div class="team-member-hotspot person-2">
-          <div class="member-info">
-            <h4>Ana Karolina</h4>
-            <p>Departamento Jurídico</p>
+          <div class="col-sm-6">
+            <div class="card text-center border-0 bg-light shadow-sm rounded-4">
+              <div class="card-body px-4 py-4">
+                <div class="mb-4 mx-2 mx-md-5">
+                  <img class="team-img img-fluid rounded-circle" src="assets/ana-karolina.jpg" alt="Ana Karolina">
+                </div>
+                <h5 class="fw-bold text-success mb-1">Ana Karolina</h5>
+                <div class="text-muted small">Departamento Jurídico</div>
+              </div>
+            </div>
           </div>
-        </div>
 
-        <div class="team-member-hotspot person-3">
-          <div class="member-info">
-            <h4>Ana Carolina</h4>
-            <p>Desenvolvedora Front-end</p>
+          <div class="col-sm-6">
+            <div class="card text-center border-0 bg-light shadow-sm rounded-4">
+              <div class="card-body px-4 py-4">
+                <div class="mb-4 mx-2 mx-md-5">
+                  <img class="team-img img-fluid rounded-circle" src="assets/ana-carolina.jpg" alt="Ana Carolina">
+                </div>
+                <h5 class="fw-bold text-success mb-1">Ana Carolina</h5>
+                <div class="text-muted small">Desenvolvedora Front-end</div>
+              </div>
+            </div>
           </div>
-        </div>
 
-        <div class="team-member-hotspot person-4">
-          <div class="member-info">
-            <h4>João Victor</h4>
-            <p>Engenheiro de Software</p>
+          <div class="col-sm-6">
+            <div class="card text-center border-0 bg-light shadow-sm rounded-4">
+              <div class="card-body px-4 py-4">
+                <div class="mb-4 mx-2 mx-md-5">
+                  <img class="team-img img-fluid rounded-circle" src="assets/gabriel.jpg" alt="Gabriel">
+                </div>
+                <h5 class="fw-bold text-success mb-1">Gabriel</h5>
+                <div class="text-muted small">Engenheiro de Software</div>
+              </div>
+            </div>
           </div>
-        </div>
 
-        <div class="team-member-hotspot person-5">
-          <div class="member-info">
-            <h4>Gabriel Makiyama</h4>
-            <p>Engenheiro de Software</p>
-          </div>
         </div>
-        
       </div>
+
+      <div class="col-lg-6 order-1 order-lg-2">
+        <div class="ms-lg-5 mb-5">
+          <span class="text-muted">Nossa Equipe</span>
+          <h2 class="display-6 fw-bold mb-3 text-success">Conheça o Time</h2>
+          <p class="lead text-muted">
+            A equipe da <strong>KABJ Guard</strong> é formada por profissionais apaixonados por tecnologia, inovação e segurança veicular.
+            Combinamos conhecimento técnico e criatividade para oferecer soluções de rastreamento eficientes e acessíveis.
+          </p>
+          <p class="lead text-muted">
+            Nosso propósito é impulsionar a mobilidade inteligente e a tranquilidade de nossos clientes com o que há de melhor em performance e confiabilidade.
+          </p>
+        </div>
+      </div>
+
     </div>
-  </section>
-  
-  <!-- FEEDBACKS -->
-  <section id="feedbacks" class="content-section alt">
-    <div class="container__feedbacks">
-      <h3>Feedbacks de Nossos Clientes</h3>
+  </div>
+</section>
+ 
+   <!-- FEEDBACKS -->
+<section id="feedbacks" class="content-section py-5" style="background-color: #f5fff5;">
+  <div class="container text-center">
+    <h3 class="mb-3" style="color: #1a4d2e;">O que nossos clientes dizem</h3>
+    <p class="text-muted mb-5">A satisfação dos nossos parceiros é o nosso maior reconhecimento.</p>
 
-      <div class="carousel feedback-carousel">
-        <button class="carousel-btn prev">&#10094;</button>
+    <!-- Carousel -->
+    <div id="carouselFeedbacks" class="carousel slide carousel-dark" data-bs-ride="carousel">
+      <div class="carousel-inner">
 
-        <div class="carousel-track">
-
-          <div class="carousel-item feedback-pair">
-            <div class="feedback-card">
-              <h4>🚛 Marcelo Oliveira — Barretos/SP</h4>
-              <p>"O sistema da KABJ Guard transformou nossa operação logística. A precisão do rastreamento é impressionante!"</p>
-            </div>
-            <div class="feedback-card">
-              <h4>📍 Fernanda Souza — Bebedouro/SP</h4>
-              <p>"O painel é intuitivo e fácil de usar. A equipe de suporte sempre responde rápido e com muita atenção!"</p>
-            </div>
+        <!-- Feedback 1 -->
+        <div class="carousel-item active">
+          <p class="lead font-italic mx-4 mx-md-5">
+            "Excelente atendimento e suporte técnico impecável. Rastreamento preciso e confiável!"
+          </p>
+          <div class="mt-4 mb-3 feedback-stars">
+            ⭐⭐⭐⭐⭐ <span class="rating">5.0</span>
           </div>
-
-          <div class="carousel-item feedback-pair">
-            <div class="feedback-card">
-              <h4>🚚 Rogério Lima — Sertãozinho/SP</h4>
-              <p>"Reduzimos custos e melhoramos a segurança da frota. Os alertas automáticos de manutenção são um diferencial."</p>
-            </div>
-            <div class="feedback-card">
-              <h4>🚛 Juliana Castro — Ribeirão Preto/SP</h4>
-              <p>"Excelente solução para quem quer ter controle total da frota. O dashboard facilita muito as decisões diárias."</p>
-            </div>
-          </div>
-
-          <div class="carousel-item feedback-pair">
-            <div class="feedback-card">
-              <h4>📍 André Martins — Franca/SP</h4>
-              <p>"Depois que começamos a usar a KABJ Guard, nunca mais tivemos problemas com desvios de rota ou atrasos."</p>
-            </div>
-            <div class="feedback-card">
-              <h4>🚚 Carla Pereira — Guaíra/SP</h4>
-              <p>"A interface é super moderna e os relatórios ajudam a entender o desempenho dos motoristas de forma clara."</p>
-            </div>
-          </div>
-
-          <div class="carousel-item feedback-pair">
-            <div class="feedback-card">
-              <h4>📍 Lucas Mendes — Monte Azul Paulista/SP</h4>
-              <p>"A KABJ Guard trouxe mais segurança e transparência para toda a nossa equipe de transporte. Vale muito a pena!"</p>
-            </div>
-            <div class="feedback-card">
-              <h4>🚛 Camila Nunes — Jaboticabal/SP</h4>
-              <p>"Os relatórios automáticos economizam muito tempo! Finalmente temos uma visão completa da operação da frota."</p>
-            </div>
-          </div>
-
+          <p class="text-muted mb-0 fw-bold">- Transportadora Silva - RIBEIRÃO PRETO/SP</p>
         </div>
 
-        <button class="carousel-btn next">&#10095;</button>
+        <!-- Feedback 2 -->
+        <div class="carousel-item">
+          <p class="lead font-italic mx-4 mx-md-5">
+            "O sistema da KABJ Guard é muito intuitivo e trouxe mais segurança à nossa frota."
+          </p>
+          <div class="mt-4 mb-3 feedback-stars">
+            ⭐⭐⭐⭐⭐ <span class="rating">4.9</span>
+          </div>
+          <p class="text-muted mb-0 fw-bold">- Logística Ribeiro - SERTÃOZINHO/SP</p>
+        </div>
+
+        <!-- Feedback 3 -->
+        <div class="carousel-item">
+          <p class="lead font-italic mx-4 mx-md-5">
+            "Excelente custo-benefício. Recomendo fortemente para quem busca qualidade!"
+          </p>
+          <div class="mt-4 mb-3 feedback-stars">
+            ⭐⭐⭐⭐⭐ <span class="rating">5.0</span>
+          </div>
+          <p class="text-muted mb-0 fw-bold">- Transportes Oliveira - BARRETOS/SP</p>
+        </div>
+
+        <!-- Feedback 4 -->
+        <div class="carousel-item">
+          <p class="lead font-italic mx-4 mx-md-5">
+            "Equipe muito atenciosa e serviço impecável! Desde a instalação até o monitoramento."
+          </p>
+          <div class="mt-4 mb-3 feedback-stars">
+            ⭐⭐⭐⭐⭐ <span class="rating">4.9</span>
+          </div>
+          <p class="text-muted mb-0 fw-bold">- Cargas União - COLINA/SP</p>
+        </div>
+
       </div>
+
+      <!-- Controles -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselFeedbacks" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Anterior</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselFeedbacks" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Próximo</span>
+      </button>
     </div>
-  </section>
+  </div>
+</section>
 
   <!-- CONTATO -->
   <section id="contato" class="content-section">
@@ -216,7 +381,6 @@
       <p>&copy; 2025 KABJ Guard. Monitoramento de Frotas com Tecnologia e Confiança.</p>
     </div>
   </footer>
-
-  <script src="script.js"></script>
+  
 </body>
 </html>

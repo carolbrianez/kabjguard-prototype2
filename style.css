@@ -25,63 +25,65 @@ body {
   margin: auto;
 }
 
-/* --- NAVBAR --- */
+/* ===== NAVBAR ===== */
 .navbar {
+  background-color: #2e7d32; 
+  padding: 0.8rem 1rem;
+}
+
+.navbar-brand img {
+  height: 45px;
+  width: auto;
+}
+
+.navbar-brand {
+  margin-right: auto;
+}
+
+.navbar-nav {
+  margin-left: auto;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  background-color: #0f6b0f; 
-  padding: 10px 40px;
 }
 
-.logo-container {
-  display: flex;
-  align-items: center;
-  gap: 6px; 
-}
-
-.logo {
-  height: 40px; 
-}
-
-.logo-text {
-  font-weight: 700;
-  font-size: 1.2rem;
-  color: white;
-}
-
-/* LINKS */
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 25px;
-  margin: 0;
-}
-
-.nav-links a {
-  color: white;
-  text-decoration: none;
+.navbar-nav .nav-link {
+  color: #fff !important;
   font-weight: 500;
+  padding: 0.5rem 1rem;
   transition: color 0.3s;
 }
 
-.nav-links a:hover {
-  color: #d6e642;
+.navbar-nav .nav-link:hover {
+  color: #00c77a !important;
 }
 
-/* Responsivo */
-@media (max-width: 768px) {
-  .container__navbar {
-    flex-direction: column;
-    gap: 10px;
+.navbar-dark .navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.navbar-dark .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255,255,255,0.8%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    background-color: #003d2b;
+    padding: 1rem;
+    border-radius: 0 0 10px 10px;
   }
 
-  .logo-container {
-    justify-content: center;
+  .navbar-nav {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .navbar-nav .nav-link {
+    display: block;
+    padding: 0.75rem;
   }
 }
 
-/* HERO */
+/* ===== HERO ===== */
 .hero {
   background: url("https://cdna.artstation.com/p/assets/images/images/063/690/740/original/onlytheocean-snwrnr-cover-2-animated.gif?1686133067") center bottom/cover no-repeat;
   color: white;
@@ -124,7 +126,7 @@ body {
   background-color: #c4d834;
 }
 
-/* CONTENT SECTIONS (geral) */
+/* ===== SOBRE ===== */
 .content-section {
   padding: 60px 0;
   background-color: #ffffff;
@@ -143,7 +145,7 @@ body {
   align-items: center;
 }
 
-/* QUEM SOMOS E SERVIÇOS */
+/* QUEM SOMOS E SERVIÇOS - container rules shared */
 .container__sobre,
 .container__servicos {
   text-align: center;
@@ -172,6 +174,235 @@ body {
 
 .benefits li {
   margin-bottom: 10px;
+}
+
+/* ===== SERVIÇOS (carousel-specific rules moved here) ===== */
+/* Note: rules below affect only carousel elements inside #carouselServicos */
+
+.carousel-item img {
+  height: 500px;
+  width: 200px;
+}
+
+#carouselServicos {
+  width: 100%;
+  height: 100% ;
+}
+
+/* ✨ Legenda */
+#carouselServicos .carousel-caption {
+  bottom: 20px;
+  color: #fff;
+  background-color: rgba(13, 115, 13, 0.75);
+  border-radius: 12px;
+  padding: 1rem;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+/* Título e texto */
+#carouselServicos h4 {
+  font-weight: 600;
+}
+
+#carouselServicos p {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+}
+
+/* ⬅️➡️ Botões */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1) brightness(2) sepia(1) hue-rotate(80deg) saturate(2);
+}
+
+/* 🔘 Indicadores */
+.carousel-indicators [data-bs-target] {
+  background-color: #0d730d;
+}
+
+.carousel-indicators .active {
+  background-color: #3eb33e;
+}
+
+/* CSS para a sessão “Realidade em Números” */
+#realidade-numeros {
+  background-color: #f5fff5;
+}
+
+.stat-card {
+  color: #1a4d2e;
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #4caf50; /* ou o verde da sua marca */
+  margin-bottom: 0.5rem;
+}
+
+.stat-description {
+  color: #555;
+  font-size: 1rem;
+}
+
+/* ===== PLANOS E PREÇOS ===== */
+#planos {
+  background-color: #f8fdf8;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.container__planos h3 {
+  color: #1a4d2e;
+  margin-bottom: 10px;
+}
+
+.descricao-planos {
+  color: #555;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.pricing-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.pricing-card {
+  background-color: #ffffff;
+  border: 2px solid #a5d6a7;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  padding: 30px;
+  width: 300px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.pricing-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+.pricing-card.destaque {
+  background-color: #e8f5e9;
+  border: 2px solid #4caf50;
+  transform: scale(1.05);
+}
+
+.pricing-card h4 {
+  color: #1b5e20;
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+}
+
+.pricing-card h2 {
+  font-size: 2rem;
+  color: #2e7d32;
+  margin-bottom: 15px;
+}
+
+.pricing-card h2 span {
+  font-size: 1rem;
+  color: #666;
+}
+
+.pricing-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.pricing-card ul li {
+  color: #444;
+  margin-bottom: 8px;
+}
+
+.btn-pricing {
+  background-color: #4caf50;
+  color: #fff;
+  padding: 10px 25px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.btn-pricing:hover {
+  background-color: #388e3c;
+}
+
+.nota-preco {
+  margin-top: 30px;
+  font-size: 0.9rem;
+  color: #444;
+  text-align: center;
+}
+
+/* ===== EQUIPE ===== */
+#equipe {
+  background-color: #f8f9fa;
+}
+
+#equipe .card {
+  border-radius: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#equipe .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 128, 0, 0.15);
+}
+
+.team-img {
+  width: 150px;    
+  height: 150px;    
+  object-fit: cover; 
+  border: 4px solid #1e5631;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  transition: transform 0.3s ease;
+  border-radius: 50% !important; 
+}
+
+.team-img:hover {
+  transform: scale(1.08);
+}
+
+#equipe h5 {
+  color: #1e5631;
+}
+
+#equipe p.lead {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 991.98px) {
+  #equipe .col-lg-6 { order: initial !important; }
+}
+
+#feedbacks {
+  background-color: #f5fff5;
+}
+
+.feedback-stars {
+  color: #ffc107;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+
+.feedback-stars .rating {
+  font-size: 1rem;
+  color: #444;
+  margin-left: 5px;
 }
 
 /* FORMULÁRIO DE CONTATO */
@@ -203,7 +434,7 @@ form .btn:hover {
   background-color: #0b5a0b;
 }
 
-/* FOOTER */
+/* ===== FOOTER ===== */
 footer {
   background-color: #0d730d;
   color: white;
@@ -211,248 +442,3 @@ footer {
   padding: 20px 0;
   margin-top: 40px;
 }
-
-/* --- SEÇÃO EQUIPE --- */
-.container__equipe {
-  text-align: center;
-  max-width: 1200px; 
-  margin: 0 auto;
-}
-
-.team-photo-container {
-  position: relative;
-  display: inline-block; 
-  margin-top: 20px;
-  overflow: hidden; 
-  border-radius: 8px; 
-}
-
-.team-photo {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-.team-member-hotspot {
-  position: absolute;
-  top: 0;
-  height: 100%; 
-  cursor: pointer;
-  z-index: 10;
-  transition: all 0.3s ease;  
-  clip-path: inset(0 0 0 0);
-}
-
-.team-member-hotspot:hover {
-  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.1);
-}
-
-.member-info {
-  position: absolute;
-  top: 55%; 
-  left: 50%;
-  transform: translateX(-50%);  
-  background-color: rgba(255, 255, 255, 0.95);
-  color: #333;
-  padding: 8px 12px;
-  border-radius: 4px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  white-space: nowrap; 
-  text-align: center;
-  opacity: 0;
-  transition: opacity 0.3s ease, transform 0.3s ease;
-  z-index: 20;
-}
-
-.member-info h4 {
-  margin: 0 0 3px 0;
-  font-size: 0.9em;
-}
-
-.member-info p {
-  margin: 0;
-  font-size: 0.75em;
-  font-weight: 400;
-  color: #666;
-}
-
-.team-member-hotspot:hover + .team-photo,
-.team-member-hotspot:hover ~ .team-photo {
-    transform: scale(1.05);
-    transition: transform 0.4s ease-in-out;
-}
-
-.team-member-hotspot:hover .member-info {
-  opacity: 1; 
-  transform: translateX(-50%); 
-}
-
-/* --- Posicionamento e Dimensão dos Hotspots --- */
-
-/* Pessoa 1: Bárbara Silva */
-.team-member-hotspot.person-1 {
-  left: 0%; 
-  width: 20%; 
-}
-
-/* Pessoa 2: Ana Karolina */
-.team-member-hotspot.person-2 {
-  left: 20%;
-  width: 20%;
-}
-
-/* Pessoa 3: Ana Carolina (Centro) */
-.team-member-hotspot.person-3 {
-  left: 40%;
-  width: 20%;
-}
-
-/* Pessoa 4: João Victor */
-.team-member-hotspot.person-4 {
-  left: 60%;
-  width: 20%;
-}
-
-/* Pessoa 5: Gabriel Makiyama */
-.team-member-hotspot.person-5 {
-  left: 80%;
-  width: 20%;
-}
-
-/* --- CARROSSEL DE SERVIÇOS --- */
-.carousel {
-  position: relative;
-  overflow: hidden;
-  max-width: 900px;
-  margin: 2rem auto;
-}
-
-.carousel-track {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-}
-
-.carousel-item {
-  min-width: 100%;
-  box-sizing: border-box;
-  padding: 2rem;
-  background-color: #ffffff;
-  border-radius: 20px;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
-  text-align: center;
-}
-
-.carousel-item img {
-  width: 550px;
-  height: 220px;
-  object-fit: cover;
-  border-radius: 12px;
-  margin-bottom: 1rem;
-}
-
-.carousel-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: #0d730d;
-  color: #fff;
-  border: none;
-  border-radius: 50%;
-  font-size: 1.5rem;
-  width: 45px;
-  height: 45px;
-  cursor: pointer;
-  transition: background 0.3s;
-  z-index: 2;
-}
-
-.carousel-btn:hover {
-  background-color: #3eb33e;
-}
-
-.carousel-btn.prev {
-  left: 15px;
-}
-
-.carousel-btn.next {
-  right: 15px;
-}
-
-/* FEEDBACKS */
-.container__feedbacks {
-  max-width: 1000px;
-  margin: 0 auto;
-  text-align: center;
-  padding: 60px 20px;
-}
-
-.feedback-carousel {
-  position: relative;
-  overflow: hidden;
-}
-
-.feedback-carousel .carousel-track {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-}
-
-.feedback-pair {
-  display: flex;
-  gap: 20px;
-  flex: 0 0 100%;
-  justify-content: center;
-}
-
-.feedback-card {
-  background-color: #fff;
-  padding: 25px;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-  width: 45%;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.feedback-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
-}
-
-.feedback-card h4 {
-  color: #007B55;
-  margin-bottom: 12px;
-  font-weight: 600;
-  font-size: 1.05rem;
-}
-
-.feedback-card p {
-  font-size: 0.95rem;
-  color: #555;
-  line-height: 1.5;
-}
-
-/* Botões do carrossel */
-.feedback-carousel .carousel-btn {
-  background-color: transparent;
-  border: none;
-  font-size: 2rem;
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  color: #007B55;
-  transition: color 0.3s ease;
-}
-
-.feedback-carousel .carousel-btn:hover {
-  color: #009b72;
-}
-
-.feedback-carousel .prev {
-  left: 10px;
-}
-
-.feedback-carousel .next {
-  right: 10px;
-}
-
-
