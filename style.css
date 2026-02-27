@@ -180,8 +180,10 @@ body {
 /* Note: rules below affect only carousel elements inside #carouselServicos */
 
 .carousel-item img {
-  height: 500px;
-  width: 200px;
+  width: 100%;
+  height: 500px; /* deixa a imagem se ajustar automaticamente */
+  object-fit: cover; /* preenche o espaço mantendo o aspecto */
+  border-radius: 10px;
 }
 
 #carouselServicos {
@@ -441,4 +443,55 @@ footer {
   text-align: center;
   padding: 20px 0;
   margin-top: 40px;
+}
+
+/* ===== Ajuste do texto do carrossel ===== */
+.carousel-caption {
+  bottom: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  text-align: center;
+}
+
+/* Evita que o texto saia da imagem e melhora a legibilidade */
+.carousel-caption h4,
+.carousel-caption p {
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+/* Em telas médias (tablets) e pequenas (celulares) */
+@media (max-width: 768px) {
+  .carousel-item img {
+    height: 250px;
+  }
+
+  .carousel-caption {
+    bottom: 5%; /* texto sobe mais ainda */
+    width: 90%;
+  }
+
+  .carousel-caption h4 {
+    font-size: 1rem;
+  }
+
+  .carousel-caption p {
+    font-size: 0.85rem;
+  }
+}
+
+/* Em celulares muito pequenos */
+@media (max-width: 480px) {
+  .carousel-item img {
+    height: 200px;
+  }
+
+  .carousel-caption {
+    bottom: 0; /* texto colado no rodapé da imagem */
+  }
+
+  .carousel-caption h4,
+  .carousel-caption p {
+    font-size: 0.8rem;
+  }
 }
